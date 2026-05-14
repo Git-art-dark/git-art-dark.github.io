@@ -1,4 +1,3 @@
-
 const dataOperators = new Map([
     ["al", "OOO Такском ЭДО / 1С-ЭДО"], 
     ["ae", "АО «Калуга-Астрал» / 1С-ЭДО"],
@@ -45,8 +44,7 @@ inp.addEventListener("keydown", (event) => {
     if (event.key === 'Enter') {
         inp["focus"] = false
         event.preventDefault();
-        inp1.blur();
-        btn1.click(); 
+        btn1.click();
     }
 })
 
@@ -96,7 +94,7 @@ const searchOperators = (operatorId, fullOperatorId) => {
 var flag = true
 
 btn3.addEventListener("click", () => {
-    inp1.blur();
+    inp.blur();
     if (flag) {
         divHelp.className = "container-info-how-search-show"
         flag = false

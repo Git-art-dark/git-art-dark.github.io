@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Lab Grotesque';
+    font-style: normal;
+    src: url(https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Thin.woff2) format('woff2'), url(https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Thin.woff) format('woff');
+}
+
 html, body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lab Grotesque', Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -20,11 +26,12 @@ html, body {
     margin: 1rem;
     padding: 1rem;
     gap: .9rem;
-    background-color: rgb(214, 236, 255);
+    background-color: rgba(0, 190, 162, .3);
     border-radius: 24px;
     -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
 }
 
 .container-head {
@@ -34,6 +41,7 @@ html, body {
 
 .container-head h1 {
     margin: 0;
+    font-weight: 900;
 }
 
 .loading-dots span {
@@ -81,19 +89,21 @@ html, body {
     height: 3vh;
     outline: none;
     border-radius: 24px;
-    border: solid aliceblue 2px;
+    border: solid rgba(0, 190, 162, .3) 2px;
     transition: border .2s ease;
+    background-color: aliceblue;
+    font-family: 'Lab Grotesque';
 }
 
 #inp-1:focus {
-    border: solid aliceblue 5px;
+    border: solid rgba(0, 190, 162, .7) 5px;
 }
 
 #btn-1 {
     width: 20vh;
     height: 4vh;
     font-size: 12pt;
-    border: solid aliceblue 2px;
+    border: solid rgba(0, 190, 162, .7)  2px;
     border-radius: 24px;
     transition: border .2s ease;
     background-color: aliceblue;
@@ -104,6 +114,7 @@ html, body {
 #btn-1:hover {
     width: 23vh;
     font-size: 13pt;
+    
 }
 
 .container-operator {
@@ -151,10 +162,11 @@ html, body {
 }
 
 
-.container-info h1, h2, h3, p {
+.container-info h1, h2, h3 {
     margin: .5rem;
 
 }
+
 
 .btn-search {
     font-size: 12pt;
@@ -165,13 +177,27 @@ html, body {
     user-select: none;
 }
 
+.container-info-how-search-show h4, p , .container-info-how-search h4, p {
+    margin: 0.5rem;
+    padding: 0;
+}
+
 .container-info-how-search {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;       
+    overflow: hidden;    
+    transition: max-height 0.8s ease, opacity 1.5s ease, visibility 1.5s ease;
 }
 
 .container-info-how-search-show {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    transition: max-height 0.8s ease, opacity 1.5s ease, visibility 1.5s ease;
 }
+
+
 
 
 @keyframes bounce {
