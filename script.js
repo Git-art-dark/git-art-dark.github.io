@@ -45,7 +45,8 @@ inp.addEventListener("keydown", (event) => {
     if (event.key === 'Enter') {
         inp["focus"] = false
         event.preventDefault();
-        btn1.click();
+        inp1.blur();
+        btn1.click(); 
     }
 })
 
