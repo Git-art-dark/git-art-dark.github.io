@@ -156,6 +156,22 @@ html, body {
 
 }
 
+.btn-search {
+    font-size: 12pt;
+    color: black;
+    cursor: pointer;
+    justify-self: center;
+    align-self: center;
+    user-select: none;
+}
+
+.container-info-how-search {
+    display: none;
+}
+
+.container-info-how-search-show {
+    display: block;
+}
 
 
 @keyframes bounce {

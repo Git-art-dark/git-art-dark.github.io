@@ -34,9 +34,11 @@ const inp = document.getElementById("inp-1");
 // button 
 const btn1 = document.getElementById("btn-1")
 const btn2 = document.querySelector("#btn-2")
+const btn3 = document.querySelector(".btn-search")
 
 // div
 const divContainerOperator = document.querySelector(".container-operator")
+const divHelp = document.querySelector(".container-info-how-search")
 
 inp.addEventListener("keydown", (event) => {
     
@@ -89,3 +91,17 @@ const searchOperators = (operatorId, fullOperatorId) => {
     
 })
 }
+
+var flag = true
+
+btn3.addEventListener("click", () => {
+
+    if (flag) {
+        divHelp.className = "container-info-how-search-show"
+        flag = false
+    } else if (!flag) {
+        divHelp.className = "container-info-how-search"
+        flag = true
+    }
+    
+})
