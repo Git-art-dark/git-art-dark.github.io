@@ -16,9 +16,9 @@ html, body {
     align-items: center;
     flex-direction: column;
     width: 70vh;
-    height: 50vh;
+    height: fit-content;
     margin: 1rem;
-    padding: .5rem;
+    padding: 1rem;
     gap: .9rem;
     background-color: rgb(214, 236, 255);
     border-radius: 24px;
