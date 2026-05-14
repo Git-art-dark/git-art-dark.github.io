@@ -39,6 +39,9 @@ const btn3 = document.querySelector(".btn-search")
 const divContainerOperator = document.querySelector(".container-operator")
 const divHelp = document.querySelector(".container-info-how-search")
 
+var countFailClick = 0
+var flag = true
+
 inp.addEventListener("keydown", (event) => {
     
     if (event.key === 'Enter') {
@@ -70,7 +73,13 @@ btn1.addEventListener("click", () => {
         inp["value"] = ""
         divContainerOperator.className = "container-operator-show";
         lableOperatorId.textContent = "";
+        countFailClick += 1
         lableOperator.textContent = "Введите корректный идентификатор!";
+        if (countFailClick >= 3) {
+            divHelp.className = "container-info-how-search-show"
+            flag = false
+            countFailClick = 0
+        }
     } else {
         console.log('error')
     }
@@ -90,8 +99,6 @@ const searchOperators = (operatorId, fullOperatorId) => {
     
 })
 }
-
-var flag = true
 
 btn3.addEventListener("click", () => {
     inp.blur();
