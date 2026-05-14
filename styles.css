@@ -4,6 +4,10 @@
     src: url(https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Thin.woff2) format('woff2'), url(https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Thin.woff) format('woff');
 }
 
+::selection {
+  background-color: rgba(0, 190, 162, 1);
+}
+
 html, body {
     font-family: 'Lab Grotesque', Arial, Helvetica, sans-serif;
     padding: 0;
@@ -14,7 +18,9 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: aliceblue;
+    color: rgba(0, 0, 0, .88);
 }
+
 
 .container {
     display: flex;
@@ -114,7 +120,8 @@ html, body {
 #btn-1:hover {
     width: 23vh;
     font-size: 13pt;
-    
+    background-color: rgba(0, 0, 0, .88);
+    color: aliceblue;
 }
 
 .container-operator {
@@ -175,9 +182,14 @@ html, body {
     justify-self: center;
     align-self: center;
     user-select: none;
+    margin-bottom: 1rem;
 }
 
-.container-info-how-search-show h4, p , .container-info-how-search h4, p {
+.container-info-how-search-show h4, p  {
+    margin: 0.5rem;
+    padding: 0;
+}
+.container-info-how-search h4, p {
     margin: 0.5rem;
     padding: 0;
 }
@@ -208,4 +220,18 @@ html, body {
   to {
     transform: translateY(-2px); 
   }
+}
+
+
+.navLink {
+    position: absolute;
+    top: 5vh;
+    text-decoration-line: none;
+    color: black;
+}
+
+ul {
+    list-style-type: decimal;
+    font-size: 14pt;
+    font-weight: 800;
 }
