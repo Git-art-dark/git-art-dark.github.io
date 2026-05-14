@@ -95,7 +95,7 @@ const searchOperators = (operatorId, fullOperatorId) => {
 var flag = true
 
 btn3.addEventListener("click", () => {
-
+    inp1.blur();
     if (flag) {
         divHelp.className = "container-info-how-search-show"
         flag = false
