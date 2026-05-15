@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Lab Grotesque';
+    font-style: normal;
+    src: url(https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Thin.woff2) format('woff2'), url(https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Thin.woff) format('woff');
+}
+
+::selection {
+  background-color: rgba(0, 190, 162, 1);
+}
+
+html, body {
+    font-family: 'Lab Grotesque', Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    color: rgba(0, 0, 0, .88);
+}
+
+.container-all-operators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70vh;
+    height: fit-content;
+    margin: 1rem;
+    margin-top: 7rem;
+    padding: 1rem;
+    gap: .9rem;
+    background-color: rgba(0, 190, 162, .3);
+    border-radius: 24px;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
