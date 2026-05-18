@@ -63,7 +63,7 @@ btn1.addEventListener("click", () => {
     inp.value = "";
     divContainerOperator.className = "container-operator-show";
     lableOperatorId.textContent = "";
-    web-site-operator.textContent = "";
+    a1.textContent = "";
     countFailClick += 1;
     lableOperator.textContent = "Введите корректный идентификатор!";
 
