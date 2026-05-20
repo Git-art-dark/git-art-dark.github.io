@@ -36,28 +36,52 @@ inp.addEventListener("keydown", (event) => {
 });
 
 btn1.addEventListener("click", () => {
-  const fullOperatorId = inp.value;
-  var operatorId = "";
+  const fullOperatorId = inp.value.trim();
 
+  if (!fullOperatorId) {
+    inp.value = "";
+    divContainerOperator.className = "container-operator-show";
+    
+    lableOperatorId.textContent = "";
+    a1.textContent = "";
+    if (divContainerOperatorH.contains(a1)) {
+        divContainerOperatorH.removeChild(a1);
+    }
+
+    countFailClick += 1;
+    lableOperator.textContent = "Введите корректный идентификатор!";
+
+    if (countFailClick >= 3) {
+      divHelp.className = "container-info-how-search-show";
+      flag = false;
+      countFailClick = 0;
+    }
+    return;
+  }
+
+  var operatorId = "";
   if (fullOperatorId.length >= 3) {
     operatorId = fullOperatorId.slice(1, 3).toLowerCase();
   } else {
     operatorId = fullOperatorId.toLowerCase();
   }
+
   const foundOperator = findOperatorBySuffix(operatorId);
+  
   if (foundOperator) {
     inp.value = "";
     divContainerOperator.className = "container-operator-show";
 
     lableOperator.textContent = "Оператор: «" + foundOperator.name + "»";
-    lableOperatorId.textContent =
-      "Введеный идентификатор: «" + fullOperatorId + "»";
+    lableOperatorId.textContent = "Введеный идентификатор: «" + fullOperatorId + "»";
 
     if (foundOperator.website) {
       a1.className = "web-site-operator";
       a1.href = foundOperator.website;
       a1.textContent = "Ссылка на сайт оператора";
-      divContainerOperatorH.appendChild(a1);
+      if (!divContainerOperatorH.contains(a1)) {
+          divContainerOperatorH.appendChild(a1);
+      }
     }
   } else {
     inp.value = "";
